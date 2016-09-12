@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>jQuery UI Accordion - Collapse content</title>
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.12.0/themes/base/jquery-ui.css">
+  <link rel="stylesheet" href="/resources/demos/style.css">
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.0/jquery-ui.js"></script>
+  <script>
+  $( function() {
+    $( "#main_accordion" ).accordion({
+      collapsible: true,
+      heightStyle: "content",
+      active: false,
+      navigation:true
+      
+    });
+     $( "#test_accordion" ).accordion({
+      collapsible: true,
+      heightStyle: "content",
+      active: false,
+      navigation:true
+      
+    });
+    $( "#test_accordion2" ).accordion({
+      collapsible: true,
+      heightStyle: "content",
+      active: false,
+      navigation:true
+      
+    });
+     $( "#sub_accordion1" ).accordion({
+      collapsible: true,
+      heightStyle: "content",
+      navigation:true,
+      active: false
+    });
+     $( "#sub_accordion2" ).accordion({
+      collapsible: true,
+      heightStyle: "content",
+      active: false,
+      navigation:true
+    });
+     $( "#sub_accordion3" ).accordion({
+      collapsible: true,
+      heightStyle: "content",
+      active: false,
+      navigation:true
+    });
+  } );
+  </script>
+</head>
+
+<body>
+
+<h1>Package Delivery Company Faq</h1>
+
+<p>
+  
+  <a href="https://packagedelivery-jinzfrield.c9users.io">Customer Faq</a>
+  <a href="https://packagedelivery-jinzfrield.c9users.io/fa_q/manager_faq">Manager Faq</a>
+  
+</p>
+
+
+<div id="main_accordion">
+  <h3>General Faq</h3>
+  <div>
+    <div id="sub_accordion1">
+      <h4>General Faq 1</h4>
+        <div>
+          <p>
+            General Faq 1 Answer
+          </p>
+        </div>
+      <h4>General Faq 2</h4>
+        <div>
+          <p>
+            General Faq 2 Answer
+          </p>
+        </div>
+      <h4>General Faq 3</h4>
+       <div>
+          <p>
+            General Faq 3 Answer
+          </p>
+        </div>
+      <h4>General Faq 4</h4>
+        <div>
+          <p>
+            General Faq 4 Answer
+          </p>
+        </div>
+    </div>
+  </div>
+  <h3>Individual Customer Faq</h3>
+  <div>
+     <div id="sub_accordion2">
+        <h4>Individual Customer Question 1</h4>
+          <div>
+            <p>Individual Customer Answer 1</p>
+          </div>
+        <h4>Individual Customer Question 2</h4>
+          <div>
+            <p>Individual Customer Answer 2</p>
+          </div>
+        <h4>Individual Customer Question 3</h4>
+          <div>
+            <p>Individual Customer Answer 3</p>
+          </div>
+        <h4>Individual Customer Question 4</h4>
+          <div>
+            <p>Individual Customer Answer 4</p>
+          </div>
+      </div>
+  </div>
+  <h3>Business Customer Faq</h3>
+  <div>
+    <div id="sub_accordion3">
+      <h4>Business Customer Question 1</h4>
+        <div>
+          <p>Business Customer 1 Answer</p>
+        </div>
+      <h4>Business Customer Question 2</h4>
+        <div>
+          <p>Business Customer 2 Answer</p>
+        </div>
+      <h4>Business Customer Question 3</h4>
+       <div>
+          <p>Business Customer 3 Answer</p>
+        </div>
+      <h4>Business Customer Question 4</h4>
+        <div>
+          <p>Business Customer 4 Answer</p>
+        </div>
+    </div>
+  </div>
+</div>
+ 
+ 
+</body>
+</html>
