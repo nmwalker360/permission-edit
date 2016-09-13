@@ -16,14 +16,17 @@
 #
 default: &default
   adapter: postgresql
-  encoding: unicode
+  encoding: SQL_ASCII
+  database: package_delivery
   # For details on connection pooling, see rails configuration guide
   # http://guides.rubyonrails.org/configuring.html#database-pooling
   pool: 5
+  username: ubuntu
+  password: password
 
 development:
   <<: *default
-  database: package_delivery_development
+ 
 
   # The specified database role being used to connect to postgres.
   # To create additional roles in postgres see `$ createuser --help`.
@@ -80,6 +83,4 @@ test:
 #
 production:
   <<: *default
-  database: package_delivery_production
-  username: package_delivery
-  password: <%= ENV['PACKAGE_DELIVERY_DATABASE_PASSWORD'] %>
+ 

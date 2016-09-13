@@ -4,4 +4,5 @@ class FaQController < ApplicationController
 
   def customerfaq
   end
+  
 end
