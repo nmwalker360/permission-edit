@@ -17,7 +17,10 @@ ActiveRecord::Schema.define(version: 0) do
   enable_extension "plpgsql"
 
   create_table "test", id: false, force: :cascade do |t|
-    t.text "test"
+
+    t.text "name", null: false
   end
+  
+  
 
 end
