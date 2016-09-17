@@ -16,8 +16,8 @@ ActiveRecord::Schema.define(version: 0) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "mainfaq", primary_key: "mainfaq_id", force: :cascade do |t|
-    t.string "mainfaq_name", limit: 50, null: false
+  create_table "test", id: false, force: :cascade do |t|
+    t.text "test"
   end
 
 end
