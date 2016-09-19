@@ -1,9 +1,12 @@
 Rails.application.routes.draw do
-  get 'fa_q/managerfaq'
+  get '/managerfaq',  to:'fa_q#manager_faq'
+  get '/customerfaq',to:'fa_q#customer_faq'
 
-  get 'fa_q/customerfaq'
-
-  root 'application#hello'
+  root 'fa_q#customer_faq'
+  
+  resources :fa_q_main_lists
+  resources :fa_q_sub_lists
+  
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

@@ -11,16 +11,27 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 0) do
+ActiveRecord::Schema.define(version: 20160919024507) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "test", id: false, force: :cascade do |t|
-
-    t.text "name", null: false
+  create_table "fa_q_main_lists", force: :cascade do |t|
+    t.string   "FaqMainName"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
   end
-  
-  
+
+  create_table "fa_q_sub_lists", force: :cascade do |t|
+    t.string   "SubFaqQuestion"
+    t.text     "SubFaqAnswer"
+    t.integer  "FaqMainLstId"
+    t.datetime "created_at",     null: false
+    t.datetime "updated_at",     null: false
+  end
+
+  create_table "test", id: false, force: :cascade do |t|
+    t.text "test"
+  end
 
 end

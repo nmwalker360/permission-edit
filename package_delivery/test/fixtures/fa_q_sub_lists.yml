@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  SubFaqQuestion: MyString
+  SubFaqAnswer: MyText
+  FaqMainLstId: 1
+
+two:
+  SubFaqQuestion: MyString
+  SubFaqAnswer: MyText
+  FaqMainLstId: 1

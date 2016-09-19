@@ -5,9 +5,14 @@ gem 'sass-rails'
 gem 'uglifier'
 gem 'coffee-rails'
 gem 'jquery-rails'
-gem 'turbolinks'
+
 gem 'jbuilder'
 gem 'puma'
+gem 'turbolinks'
+gem 'purecss-rails'
+gem "paperclip", "3.5.4"
+gem 'normalize-rails'
+gem 'bootstrap-sass'
 
 group :development, :test do
   
