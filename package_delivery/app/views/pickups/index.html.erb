@@ -1,0 +1,62 @@
+<p id="notice"><%= notice %></p>
+
+<h1 style= "text-align:center;">Listing Pickups</h1>
+
+<table>
+  <% @pickups.each do |pickup| %>
+  
+    <tr>
+      <th>Name</th>
+      <td><%= pickup.name %></td>
+      <th>Country</th>
+      <td><%= pickup.country %></td>
+      <th>Pickup date</th>
+      <td><%= pickup.pickup_date %></td>
+    </tr>
+    
+    <tr>
+      <th>Company</th>
+      <td><%= pickup.company %></td>
+      <th>Number</th>
+      <td><%= pickup.number %></td>
+      <th>Pickup time</th>
+      <td><%= pickup.pickup_time %></td>
+      </tr>
+      <tr>
+        <th>Address</th>
+        <td><%= pickup.address %></td>
+        <th> Amount</th>
+        <td><%= pickup.shipment_amount %></td>
+        <th>Instructions</th>
+        <td><%= pickup.instructions %></td>
+      </tr>
+      <tr>
+        <th>City</th>
+        <td><%= pickup.city %></td>
+        <th>Weight</th>
+        <td><%= pickup.weight %></td>
+      </tr>
+      <tr>
+        <th>State</th>
+        <td><%= pickup.state %></td>
+        <th>Location type</th>
+        <td><%= pickup.location_type %></td>
+      </tr>
+      <tr>
+        <th>Post Code</th>
+        <td><%= pickup.zip %></td>
+        <th>Package location</th>
+        <td><%= pickup.package_location %></td>
+      </tr>
+        <td><%= link_to 'Show', pickup %></td>
+        <td><%= link_to 'Edit', edit_pickup_path(pickup) %></td>
+        <td><%= link_to 'Delete', pickup, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+ 
+</table>
+
+<br>
+
+<%= link_to 'New Pickup', new_pickup_path %>
+<%= link_to 'Home', root_path %>

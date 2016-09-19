@@ -1,0 +1,35 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  company: MyString
+  address: MyString
+  city: MyString
+  state: MyString
+  zip: 1
+  country: MyString
+  number: 1
+  shipment_amount: 1
+  weight: 9.99
+  location_type: MyString
+  package_location: MyString
+  instructions: MyText
+  pickup_date: 2016-09-18
+  pickup_time: 2016-09-18 11:48:33
+
+two:
+  name: MyString
+  company: MyString
+  address: MyString
+  city: MyString
+  state: MyString
+  zip: 1
+  country: MyString
+  number: 1
+  shipment_amount: 1
+  weight: 9.99
+  location_type: MyString
+  package_location: MyString
+  instructions: MyText
+  pickup_date: 2016-09-18
+  pickup_time: 2016-09-18 11:48:33

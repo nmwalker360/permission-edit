@@ -1,0 +1,79 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @pickup.name %>
+</p>
+
+<p>
+  <strong>Company:</strong>
+  <%= @pickup.company %>
+</p>
+
+<p>
+  <strong>Address:</strong>
+  <%= @pickup.address %>
+</p>
+
+<p>
+  <strong>City:</strong>
+  <%= @pickup.city %>
+</p>
+
+<p>
+  <strong>State:</strong>
+  <%= @pickup.state %>
+</p>
+
+<p>
+  <strong>Zip:</strong>
+  <%= @pickup.zip %>
+</p>
+
+<p>
+  <strong>Country:</strong>
+  <%= @pickup.country %>
+</p>
+
+<p>
+  <strong>Number:</strong>
+  <%= @pickup.number %>
+</p>
+
+<p>
+  <strong>Shipment amount:</strong>
+  <%= @pickup.shipment_amount %>
+</p>
+
+<p>
+  <strong>Weight:</strong>
+  <%= @pickup.weight %>
+</p>
+
+<p>
+  <strong>Location type:</strong>
+  <%= @pickup.location_type %>
+</p>
+
+<p>
+  <strong>Package location:</strong>
+  <%= @pickup.package_location %>
+</p>
+
+<p>
+  <strong>Instructions:</strong>
+  <%= @pickup.instructions %>
+</p>
+
+<p>
+  <strong>Pickup date:</strong>
+  <%= @pickup.pickup_date %>
+</p>
+
+<p>
+  <strong>Pickup time:</strong>
+  <%= @pickup.pickup_time %>
+</p>
+
+<%= link_to 'Edit', edit_pickup_path(@pickup) %> |
+<%= link_to 'Back', pickups_path %>

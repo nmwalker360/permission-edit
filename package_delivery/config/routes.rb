@@ -1,7 +1,15 @@
 Rails.application.routes.draw do
+  resources :pickups
+  get 'home/index'
+
   get 'fa_q/managerfaq'
 
-  get 'fa_q/customerfaq'
+  get 'fa_q/customerfaq' 
+  
+  resources :testimonies
+
+  
+  root 'home#index'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
