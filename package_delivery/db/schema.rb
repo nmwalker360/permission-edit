@@ -37,8 +37,11 @@ ActiveRecord::Schema.define(version: 20160918114833) do
   end
 
   create_table "test", id: false, force: :cascade do |t|
+
     t.text "name", null: false
   end
+  
+  
 
   create_table "testimonies", force: :cascade do |t|
     t.string   "name"
