@@ -10,18 +10,21 @@
 # you'll amass, the slower it'll run and the greater likelihood for issues).
 #
 # It's strongly recommended that you check this file into your version control system.
+#ActiveRecord::Schema.define(version: 20160919024507) do
 
-ActiveRecord::Schema.define(version: 20160919024507) do
+ActiveRecord::Schema.define(version: 20160918114833) do
+
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
 
   create_table "fa_q_main_lists", force: :cascade do |t|
     t.string   "FaqMainName"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
   end
-
+  
   create_table "fa_q_sub_lists", force: :cascade do |t|
     t.string   "SubFaqQuestion"
     t.text     "SubFaqAnswer"
@@ -29,9 +32,38 @@ ActiveRecord::Schema.define(version: 20160919024507) do
     t.datetime "created_at",     null: false
     t.datetime "updated_at",     null: false
   end
+  
+  create_table "pickups", force: :cascade do |t|
+    t.string   "name"
+    t.string   "company"
+    t.string   "address"
+    t.string   "city"
+    t.string   "state"
+    t.integer  "zip"
+    t.string   "country"
+    t.integer  "number"
+    t.integer  "shipment_amount"
+    t.decimal  "weight"
+    t.string   "location_type"
+    t.string   "package_location"
+    t.text     "instructions"
+    t.date     "pickup_date"
+    t.time     "pickup_time"
+    t.datetime "created_at",       null: false
+    t.datetime "updated_at",       null: false
+  end
 
+  
   create_table "test", id: false, force: :cascade do |t|
     t.text "test"
+  end
+
+  create_table "testimonies", force: :cascade do |t|
+    t.string   "name"
+    t.text     "text"
+    t.decimal  "rating"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
 end

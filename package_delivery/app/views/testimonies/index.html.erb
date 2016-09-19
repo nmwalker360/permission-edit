@@ -1,0 +1,34 @@
+<body style = "background-color:#808080;">
+
+<h1 style= "text-align:center;">Testimonies</h1>
+
+ <nav><%= link_to 'Home', root_path %>	</nav>
+ <nav><%= link_to 'Log In', root_path %>	</nav>
+  <nav><%= link_to 'Contact Us', root_path %>	</nav>
+ <div style= "color:white;">
+<table align = "center">
+
+  <% @testimonies.each do |testimony| %>
+      
+	  <tr>
+      <td style= "font-size:120%;text-align:center;"><%= testimony.text %></td>
+	  </tr>
+	   <tr>
+	       <td style = "text-align:center;"><%=testimony.name %></td>
+	   </tr>
+	  <tr>
+	   <td style = "text-align:center;"><%=testimony.rating %></td>   
+	  </tr>
+	  <td style = "text-align:right;"><%= link_to 'Edit', edit_testimony_path(testimony) %></td>
+	  <td style = "text-align:right;"><%= link_to 'Delete', testimony_path(testimony),
+              method: :delete,
+              data: { confirm: 'Are you sure?' } %></td>
+	  
+   
+  <% end %>
+</table>
+
+</div>
+<p style="text-align:right;">
+	<%= link_to 'New Testimony', new_testimony_path %>
+</p>

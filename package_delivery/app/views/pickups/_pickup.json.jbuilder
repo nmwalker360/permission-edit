@@ -1,0 +1,2 @@
+json.extract! pickup, :id, :name, :company, :address, :city, :state, :zip, :country, :number, :shipment_amount, :weight, :location_type, :package_location, :instructions, :pickup_date, :pickup_time, :created_at, :updated_at
+json.url pickup_url(pickup, format: :json)
