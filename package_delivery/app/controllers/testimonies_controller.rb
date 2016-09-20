@@ -8,8 +8,10 @@ class TestimoniesController < ApplicationController
     end
     
     def edit
-	    @testimony = Testimony.find(params[:id])
-	end
+    @testimony = Testimony.find(params[:id])
+    end
+    
+	    
     
     def create
         @testimony = Testimony.new(testimony_params)
@@ -22,14 +24,16 @@ class TestimoniesController < ApplicationController
     end
     
     def update
-		@testimony = Testimony.find(params[:id])
+    	@testimony = Testimony.find(params[:id])
  
-		if @testimony.update(testimony_params)
-			redirect_to testimonies_path
-		else
+		 if @testimony.update(testimony_params)
+		 	redirect_to testimonies_path
+		 else
 			render 'edit'
-	    end
-	end 
+		 end
+		 
+    end
+    
 	
 	def destroy
 	@testimony = Testimony.find(params[:id])

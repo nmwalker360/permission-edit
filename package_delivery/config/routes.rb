@@ -2,19 +2,17 @@ Rails.application.routes.draw do
 
   get '/managerfaq',  to:'fa_q#manager_faq'
   get '/customerfaq',to:'fa_q#customer_faq'
-  get 'home/index'
-  
+  #get 'home/index'
+  get 'home/home'
   resources :fa_q_main_lists
   resources :fa_q_sub_lists
-  
-
+  resources :contacts
   resources :pickups
-  
-  
   resources :testimonies
 
   
-  root 'home#index'
+  
+  root :to => 'home#home'
 
   
   # The priority is based upon order of creation: first created -> highest priority.

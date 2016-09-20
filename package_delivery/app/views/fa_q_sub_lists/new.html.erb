@@ -1,0 +1,21 @@
+<h1>faq new</h1>
+<%= form_for :fa_q_sub_lists, url: fa_q_sub_lists_path do |f| %>
+  <p>
+    <%= f.label :FaqMainLstId%>
+    <%= f.text_field :FaqMainLstId%>
+  </p>
+  <p>
+    <%= f.label :SubFaqQuestion%>
+    <%= f.text_field:SubFaqQuestion%>
+  </p>
+  <p>
+    <%= f.label :SubFaqAnswer%>
+    <%= f.text_area:SubFaqAnswer%>
+  </p>
+  <p>
+    <%= f.submit%>
+  </p>
+<%end%>
+
+<%= render 'form' %>
+<%= link_to 'Back', fa_q_sub_lists_path %>

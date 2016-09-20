@@ -10,21 +10,18 @@
 # you'll amass, the slower it'll run and the greater likelihood for issues).
 #
 # It's strongly recommended that you check this file into your version control system.
-#ActiveRecord::Schema.define(version: 20160919024507) do
 
-ActiveRecord::Schema.define(version: 20160918114833) do
-
+ActiveRecord::Schema.define(version: 20160919024507) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
-
 
   create_table "fa_q_main_lists", force: :cascade do |t|
     t.string   "FaqMainName"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
   end
-  
+
   create_table "fa_q_sub_lists", force: :cascade do |t|
     t.string   "SubFaqQuestion"
     t.text     "SubFaqAnswer"
@@ -32,7 +29,7 @@ ActiveRecord::Schema.define(version: 20160918114833) do
     t.datetime "created_at",     null: false
     t.datetime "updated_at",     null: false
   end
-  
+
   create_table "pickups", force: :cascade do |t|
     t.string   "name"
     t.string   "company"
@@ -53,7 +50,6 @@ ActiveRecord::Schema.define(version: 20160918114833) do
     t.datetime "updated_at",       null: false
   end
 
-  
   create_table "test", id: false, force: :cascade do |t|
     t.text "test"
   end
@@ -65,5 +61,15 @@ ActiveRecord::Schema.define(version: 20160918114833) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
+  
+   create_table "contacts", force: true do |t|
+    t.string   "name"
+    t.string   "email"
+    t.string   "phone"
+    t.text     "message"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+  
 
 end
