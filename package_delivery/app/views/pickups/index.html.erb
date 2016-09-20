@@ -29,6 +29,9 @@
         <td><%= pickup.shipment_amount %></td>
         <th>Instructions</th>
         <td><%= pickup.instructions %></td>
+        <!--<td style = 'text-align:right;'><%= link_to 'Show', pickup %></td>-->
+        <td style = 'text-align:right;'><%= link_to 'Edit', edit_pickup_path(pickup) %></td>
+        <td style = 'text-align:right;'><%= link_to 'Delete', pickup, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
       <tr>
         <th>City</th>
@@ -48,9 +51,8 @@
         <th>Package location</th>
         <td><%= pickup.package_location %></td>
       </tr>
-        <td><%= link_to 'Show', pickup %></td>
-        <td><%= link_to 'Edit', edit_pickup_path(pickup) %></td>
-        <td><%= link_to 'Delete', pickup, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      <tr>
+       
       </tr>
     <% end %>
  
