@@ -1,14 +1,27 @@
 Rails.application.routes.draw do
 
+  get 'sessions/new'
+
   get '/managerfaq',  to:'fa_q#manager_faq'
   get '/customerfaq',to:'fa_q#customer_faq'
+  
   #get 'home/index'
-  get 'home/home'
+  get '/home', to: "home#home"
+  get '/termsandcondition', to: "home#index"
+  get  '/signup',  to: 'users#new'
+  get  '/employeelogin',  to: 'users#show_employee'
+  post '/signup',  to: 'users#create'
+  
+  get    '/login',   to: 'sessions#new'
+  post   '/login',   to: 'sessions#create'
+  delete '/logout',  to: 'sessions#destroy'
+  
   resources :fa_q_main_lists
   resources :fa_q_sub_lists
   resources :contacts
   resources :pickups
   resources :testimonies
+  resources :users
 
   
   

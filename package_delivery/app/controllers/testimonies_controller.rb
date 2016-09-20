@@ -21,16 +21,16 @@ class TestimoniesController < ApplicationController
 		else
 			render 'new'
 	end
-    end
+	end
     
     def update
     	@testimony = Testimony.find(params[:id])
  
-		 if @testimony.update(testimony_params)
-		 	redirect_to testimonies_path
-		 else
+		if @testimony.update(testimony_params)
+			redirect_to testimonies_path
+		else
 			render 'edit'
-		 end
+		end
 		 
     end
     

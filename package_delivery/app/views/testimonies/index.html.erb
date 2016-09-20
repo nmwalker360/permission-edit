@@ -1,15 +1,12 @@
-<body style = "background-color:#808080;">
+
 
 <h1 style= "text-align:center;">Testimonies</h1>
 
- <nav><%= link_to 'Home', root_path %>	</nav>
- <nav><%= link_to 'Log In', root_path %>	</nav>
-  <nav><%= link_to 'Contact Us', root_path %>	</nav>
- <div style= "color:white;">
+
 <table align = "center">
 
   <% @testimonies.each do |testimony| %>
-      
+  <div class="testimonyblock">
 	  <tr>
       <td style= "font-size:120%;text-align:center;"><%= testimony.text %></td>
 	  </tr>
@@ -26,6 +23,7 @@
 	  
    
   <% end %>
+  </div>
 </table>
 
 </div>

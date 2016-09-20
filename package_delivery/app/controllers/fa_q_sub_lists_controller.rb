@@ -48,6 +48,6 @@ class FaQSubListsController < ApplicationController
 	
 	 private
 	def sublist_params
-			params.require(:fa_q_sub_lists).permit(:SubFaqQuestion,:SubFaqAnswer,:FaqMainLstId)			
+			params.require(:fa_q_sub_list).permit(:SubFaqQuestion,:SubFaqAnswer,:FaqMainLstId)			
 	end
 end

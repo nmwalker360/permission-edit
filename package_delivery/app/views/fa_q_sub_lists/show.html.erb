@@ -9,14 +9,15 @@
 <body>
   <header>
     <h1>Faq Management</h1>
-    <%= link_to "Customer Faq   ",   customerfaq_path %><%= link_to "   Manager Faq",   managerfaq_path %>
   </header>
   <div class="managerfaq_container">
       <section class="faq_section">
-        <h3><%=@sublist.SubFaqAnswer %><h3>
-        <textarea disabled class="faq_textarea"><%=@sublist.SubFaqQuestion%></textarea>
-        <p>button</p>
-        <%= button_to "Edit", edit_fa_q_sub_list_path(@sublist)%>
+        <label>Question Title:</label><br>
+        <p><%=@sublist.SubFaqQuestion %><p><br>
+        <label>Question Answer:</label><br>
+        <textarea disabled class="faq_textarea"><%=@sublist.SubFaqAnswer%></textarea>
+        
+        <%= link_to "Edit", edit_fa_q_sub_list_path(@sublist)%>
         <%= button_to 'Delete', fa_q_sub_list_path(@sublist),
               method: :delete,
               data: { confirm: 'Are you sure?' } %>
@@ -24,7 +25,7 @@
       </section>
       <!----Navigation Bar---------------------------------->
       <nav class="faq_nav">
-          <%=button_to'new',new_fa_q_sub_list_path%>
+          <button><%=link_to'new',new_fa_q_sub_list_path, class:"btn  btn-primary btn-faqadd",style:"color:white"%></button>
           <%@faqmainlists.each do |mains|%>
              <div class="panel-group" id="accordion">
             <div class="panel panel-default">
