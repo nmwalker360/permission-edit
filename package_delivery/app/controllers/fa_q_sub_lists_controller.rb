@@ -2,6 +2,7 @@ class FaQSubListsController < ApplicationController
   def index
      @faqmainlist = FaQMainList.all
      @faqsublist = FaQSubList.all
+     @increment=0
   end
   
   def new
@@ -18,9 +19,10 @@ class FaQSubListsController < ApplicationController
   end
   
   def show
-    @faqmainlists = FaQMainList.all
-    @faqsublists = FaQSubList.all
+    @faqmainlist = FaQMainList.all
+    @faqsublist = FaQSubList.all
     @sublist = FaQSubList.find(params[:id])
+    @increment=0
   end
   
   def edit
