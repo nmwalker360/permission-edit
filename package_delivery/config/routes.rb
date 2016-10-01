@@ -22,6 +22,7 @@ Rails.application.routes.draw do
   resources :pickups
   resources :testimonies
   resources :users
+  resources :news
 
   
   
