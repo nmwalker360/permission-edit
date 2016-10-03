@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <div class="container">
+      <h2>Manager News Management</h2>
+      <%= link_to 'Add New','new' , :class =>'btn-faqadd btn btn btn-primary'%>
+      <div class="panel-group">
+        <%@news.each do |n| %>
+            <div class="panel panel-default">
+              <div class="panel-heading">
+                  <h4><%=n.title%></h4>
+                  <div class="corner">
+                      <%= link_to "Edit", edit_news_path(n)%>
+                      <%= button_to 'Delete', news_path(n),
+                          method: :delete,
+                          data: { confirm: 'Are you sure?' } %>
+                  </div>
+              </div>
+              <div class="panel-body">
+                  <%=n.updated_at%>
+                  <p><%=n.content%></p>
+              </div>
+            </div>
+        <%end%>
+       </div>
+    </div>
+
+</html>
