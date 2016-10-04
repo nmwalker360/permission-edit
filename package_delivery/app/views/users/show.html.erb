@@ -1,3 +1,5 @@
+<!DOCTYPE html>
+<html>
 <h1>Manager Login</h1>
   <div class="row">
   <aside class="col-md-4">
@@ -10,12 +12,31 @@
       </h1>
     </section>
     <aside class="col-md-4">
-    <section>
-      <%= link_to "Manage Faq",   fa_q_sub_lists_path %></br></br>
-       <%= link_to "Manage News", news_path%></br></br>
-      <%= link_to "Manage Quote",  controller: 'pickups' %></br></br>
-      <%= link_to "Register New Employee", signup_path %></br></br>
-     
-    </section>
+      <section>
+        <%= link_to "Manage Faq",   fa_q_sub_lists_path %></br></br>
+         <%= link_to "Manage News", news_path%></br></br>
+        <%= link_to "Manage Quote",  controller: 'pickups' %></br></br>
+        <%= link_to "Register New Employee", signup_path %></br></br>
+      </section>
   </aside>
 </div>
+
+<%@employees.each do |s|%>
+      <h4><%=s.name%></h4>
+      <p><%=s.status%>  </p>
+      <% if s.status=="Available"%>
+        <select name="CustomerRequest">
+          <%@pendingrequest.each do |p|%>
+            <option value=<%=p.name%> ><%=p.name%></option>
+          <%end%>
+        </select>
+        <button>Confirm</button><button>Cancel</button>
+      <%else%>
+        <%@pendingrequest.each do |p|%>
+          <%=p.name%><%=p.pickupscondition%>
+        <%end%>
+      <%end%>
+      </br>
+    <%end%>
+    
+</html>

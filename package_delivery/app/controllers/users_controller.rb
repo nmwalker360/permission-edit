@@ -2,6 +2,8 @@ class UsersController < ApplicationController
 
   def show
     @user = User.find(params[:id])
+    @employees = User.where(:identity => "driver")
+    @pendingrequest = Pickup.where( "(pickupscondition ='Pending') or pickupscondition ='pending'")
   end
   
   def show_employee
@@ -30,7 +32,7 @@ class UsersController < ApplicationController
   private
 
     def user_params
-      params.require(:user).permit(:name, :email, :password,
+      params.require(:user).permit(:name, :email,:identity, :password,
                                    :password_confirmation)
     end
     

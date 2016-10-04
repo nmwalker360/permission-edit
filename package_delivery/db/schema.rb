@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161001122317) do
+ActiveRecord::Schema.define(version: 20161004051116) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -37,6 +37,14 @@ ActiveRecord::Schema.define(version: 20161001122317) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "pickup_histories", force: :cascade do |t|
+    t.string   "condition"
+    t.integer  "EmployeeId"
+    t.integer  "PickupId"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "pickups", force: :cascade do |t|
     t.string   "name"
     t.string   "company"
@@ -53,8 +61,10 @@ ActiveRecord::Schema.define(version: 20161001122317) do
     t.text     "instructions"
     t.date     "pickup_date"
     t.time     "pickup_time"
-    t.datetime "created_at",       null: false
-    t.datetime "updated_at",       null: false
+    t.datetime "created_at",                           null: false
+    t.datetime "updated_at",                           null: false
+    t.integer  "employeeid",       default: 0,         null: false
+    t.string   "pickupscondition", default: "Pending", null: false
   end
 
   create_table "test", id: false, force: :cascade do |t|
@@ -73,9 +83,10 @@ ActiveRecord::Schema.define(version: 20161001122317) do
     t.string   "name"
     t.string   "email"
     t.string   "identity"
-    t.datetime "created_at",      null: false
-    t.datetime "updated_at",      null: false
+    t.datetime "created_at",                            null: false
+    t.datetime "updated_at",                            null: false
     t.string   "password_digest"
+    t.string   "status",          default: "Available", null: false
   end
 
 end
