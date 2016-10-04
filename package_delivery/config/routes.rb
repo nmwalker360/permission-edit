@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
 
+
   get 'onthespotnews', to:'news#CustomerNews' 
+
 
   get 'sessions/new'
 
@@ -23,6 +25,12 @@ Rails.application.routes.draw do
   resources :contacts
   resources :pickups
   resources :testimonies
+  resources :quotes do
+    collection do
+      get :new
+      get :show
+    end
+  end
   resources :users
   
   resources :news
