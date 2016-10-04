@@ -1,0 +1,21 @@
+<h1>On the Spot News</h1>
+
+<!DOCTYPE html>
+<html>
+    <div class="container">
+      <div class="panel-group">
+        <%@news.each do |n| %>
+            <div class="panel panel-default">
+              <div class="panel-heading">
+                  <h4><%=n.title%></h4>
+              </div>
+              <div class="panel-body">
+                  <%=n.updated_at%>
+                  <p><%=n.content%></p>
+              </div>
+            </div>
+        <%end%>
+       </div>
+    </div>
+
+</html>

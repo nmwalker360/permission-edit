@@ -1,6 +1,9 @@
 Rails.application.routes.draw do
 
-  
+
+  get 'onthespotnews', to:'news#CustomerNews' 
+
+
   get 'sessions/new'
 
   get '/managerfaq',  to:'fa_q#manager_faq'
@@ -29,7 +32,9 @@ Rails.application.routes.draw do
     end
   end
   resources :users
-
+  
+  resources :news
+  
   
   
   root :to => 'home#home'
