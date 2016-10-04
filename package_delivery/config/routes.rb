@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  
   get 'sessions/new'
 
   get '/managerfaq',  to:'fa_q#manager_faq'
@@ -21,6 +22,12 @@ Rails.application.routes.draw do
   resources :contacts
   resources :pickups
   resources :testimonies
+  resources :quotes do
+    collection do
+      get :new
+      get :show
+    end
+  end
   resources :users
 
   

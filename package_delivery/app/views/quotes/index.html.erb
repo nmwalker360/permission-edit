@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Quotes</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Package type</th>
+      <th>Quantity</th>
+      <th>Length</th>
+      <th>Width</th>
+      <th>Height</th>
+      <th>Measurement</th>
+      <th>Weight</th>
+      <th>Wcategory</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @quotes.each do |quote| %>
+      <tr>
+        <td><%= quote.package_type %></td>
+        <td><%= quote.quantity %></td>
+        <td><%= quote.length %></td>
+        <td><%= quote.width %></td>
+        <td><%= quote.height %></td>
+        <td><%= quote.measurement %></td>
+        <td><%= quote.weight %></td>
+        <td><%= quote.wcategory %></td>
+        
+        
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Quote', new_quote_path %>

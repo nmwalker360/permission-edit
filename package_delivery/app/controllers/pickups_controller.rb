@@ -24,7 +24,7 @@ class PickupsController < ApplicationController
   # POST /pickups
   # POST /pickups.json
   def create
-    @pickup = Pickup.new(pickup_params)
+    @pickup = Pickup.new(picksudos)
 
     respond_to do |format|
       if @pickup.save
@@ -56,7 +56,7 @@ class PickupsController < ApplicationController
   def destroy
     @pickup.destroy
     respond_to do |format|
-      format.html { redirect_to pickups_url, notice: 'Pickup was successfully destroyed.' }
+      format.html { redirect_to pickups_url, notice: 'Pickup was successfully deleted.' }
       format.json { head :no_content }
     end
   end
