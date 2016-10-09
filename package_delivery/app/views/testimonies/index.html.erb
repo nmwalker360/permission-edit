@@ -16,11 +16,14 @@
 	  <tr>
 	   <td style = "text-align:center;"><%=testimony.rating %></td>   
 	  </tr>
-	  <td style = "text-align:right;"><%= link_to 'Edit', edit_testimony_path(testimony) %></td>
-	  <td style = "text-align:right;"><%= link_to 'Delete', testimony_path(testimony),
+	  <% if logged_in? %>
+	    <% if current_user.identity == "manager" %>
+	  		<td style = "text-align:right;"><%= link_to 'Edit', edit_testimony_path(testimony) %></td>
+	  		<td style = "text-align:right;"><%= link_to 'Delete', testimony_path(testimony),
               method: :delete,
               data: { confirm: 'Are you sure?' } %></td>
-	  
+       <% end %>
+	  <%end %>
    
   <% end %>
   </div>
